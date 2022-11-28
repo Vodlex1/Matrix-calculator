@@ -5,12 +5,9 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
-import java.awt.Insets;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -18,7 +15,6 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -240,7 +236,7 @@ public class GUI {
 				matrixBPanel.setBorder(BorderFactory.createMatteBorder(5, 0, 0, 0, new Color(238,238,238)));
 				matrixBPanel.setBackground(new Color(255,255,255));
 				matrixBPanel.setLayout(new GridBagLayout());
-				matrixAPanel.repaint();
+				matrixBPanel.repaint();
 				
 				x_axis1.setText("");
 				y_axis1.setText("");
@@ -260,51 +256,5 @@ public class GUI {
 			}
 		}
 	};
-	/*
-	void ResultWindow(int a, int b) {
-		
-		if(a != b) return;
-		
-		JLabel[][] resultTextFieldList;
-		JFrame resultWindow = new JFrame();
-		resultWindow.setSize(640, 520);
-		resultWindow.setLocation(1000,500);
-		JPanel resultPanel = new JPanel();
-		resultTextFieldList = new JLabel[a][b];
-		
-		resultPanel.setLayout(new GridBagLayout());
-		resultPanel.setBackground(new Color(255,255,255));
-		
-		for(int i=0; i<a; i++) {
-			for(int j=0; j<b; j++) {
-				resultTextFieldList[i][j] = new JLabel();
-			}
-		}
-		
-		for(int i=0; i<a; i++) {
-			for(int j=0; j<b; j++) {
-				gbc1.gridx = j;
-				gbc1.gridy = i;
-				gbc1.weightx = 0.5;
-				gbc1.weighty = 0.5;
-				resultTextFieldList[i][j].setPreferredSize(new Dimension(35, 35));
-				resultTextFieldList[i][j].setText(Arrays.toString(resultMatrix));
-				resultPanel.add(resultTextFieldList[i][j], gbc1);
-			}
-		}
-	
-		resultWindow.add(resultPanel);
-		resultWindow.setVisible(true);
-	}
-	
-	void resultMatrix(double array[][]) {
-		resultMatrix = new double[Integer.parseInt(x_axis1.getText())][ Integer.parseInt(y_axis2.getText())];
-		for(int i=0; i<Integer.parseInt(x_axis1.getText()); i++) {
-			for(int j=0; j<Integer.parseInt(y_axis2.getText()); j++) {
-				resultMatrix[i][j] = array[i][j];
-			}
-		}
-	}
-	*/
 }
 
